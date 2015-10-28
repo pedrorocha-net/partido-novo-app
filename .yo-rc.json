@@ -1,0 +1,13 @@
+{
+  "generator-iac": {
+    "answers": {
+      "appName": "Partido Novo",
+      "appId": "net.pedrorocha.partidonovo",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "appModule": "partidoNovo"
+    }
+  }
+}
