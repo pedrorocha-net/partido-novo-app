@@ -1,6 +1,7 @@
 'use strict'
 angular.module('main', [
   'ionic'
+  'ionic-material'
   'ngCordova'
   'ui.router'
 ]).config ($stateProvider, $urlRouterProvider) ->
@@ -24,4 +25,4 @@ angular.module('main', [
     views: 'tab-debug':
       templateUrl: 'templates/debug.html'
       controller: 'DebugCtrl as ctrl'
-  
+

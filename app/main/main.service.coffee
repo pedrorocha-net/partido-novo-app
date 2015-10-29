@@ -17,6 +17,6 @@ MainFactory = ($timeout) ->    # some initial data
     changeBriefly: this.changeBriefly
     someData: this.someData
   }
-   
+
 angular.module('main').factory 'MainFactory', MainFactory
 
