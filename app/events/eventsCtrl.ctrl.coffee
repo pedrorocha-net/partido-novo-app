@@ -8,6 +8,10 @@ eventsCtrl = (EventsFactory) ->
     vm.events = result.data;
     return
 
+  vm.openTicket = (url) ->
+    window.open(url, '_system');
+    return
+
   return
 
 angular.module('main').controller 'eventsCtrl', eventsCtrl

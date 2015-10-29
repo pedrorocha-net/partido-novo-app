@@ -10,5 +10,5 @@ angular.module('main').directive 'event', ->
       cidade: '@'
       bairro: '@'
       estado: '@'
-      descricao: '@'
+      link: '@'
   }

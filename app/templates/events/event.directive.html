@@ -1,11 +1,15 @@
-<div class="list card stable-bg" ui-sref="events.listDetail">
-  <a class="item item-thumbnail-left">
-    <img src="http://placehold.it/100x100" class="no-radius">
-    <h2>{{ titulo }}</h2>
-    <address class="item__address">
-      <span>{{ rua }}, {{ bairro }}, {{ cidade }} - {{ estado }} </span>
-    </address>
-    <span class="item__date-description">{{ nome }}</span>
-    <p>{{ descricao }}</p>
-  </a>
+<div class="list card stable-bg">
+  <div class="item item-button-right">
+    <button class="button button-flat button-balanced ink btn-inscrevase" ng-click= "vm.openTicket('{{ link }}')"> inscreva-se </button>
+    <a ui-sref="events.listDetail">
+      <h2>{{ cidade }}</h2>
+      <h3>{{ titulo }}</h3>
+      <span class="item__date-description">{{ nome }}</span>
+      <address class="item__address">
+        <span>{{ rua }}, {{ bairro }}, {{ cidade }} - {{ estado }} </span>
+      </address>
+    </a>
+  </div>
 </div>
+
+
