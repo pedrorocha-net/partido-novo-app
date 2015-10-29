@@ -29,11 +29,15 @@
   </head>
   <body ng-app="partidoNovo">
 
-    <!-- the nav bar will be updated as we navigate between views -->
-    <!-- <ion-nav-bar> can be removed when using sidemenu (contained in menu.html) -->
-    <ion-nav-bar class="bar-balanced">
-      <ion-nav-back-button></ion-nav-back-button>
-    </ion-nav-bar>
+    <ion-header-bar class="bar bar-balanced" align-title="left">
+      <a ui-sref="events.list">
+        <img src=" http://placehold.it/100x36" alt="">
+      </a>
+      <a ui-sref="events.about" class="btn-about">
+        <i class="icon ion-plus"></i>
+      </a>
+
+    </ion-header-bar>
     <!-- the current view will be rendered in the <ion-nav-view> directive -->
     <ion-nav-view></ion-nav-view>
 

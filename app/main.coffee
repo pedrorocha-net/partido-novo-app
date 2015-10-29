@@ -5,24 +5,23 @@ angular.module('main', [
   'ngCordova'
   'ui.router'
 ]).config ($stateProvider, $urlRouterProvider) ->
-  # ROUTING with ui.router
-  $urlRouterProvider.otherwise '/main/list'
 
-  $stateProvider.state 'main',
-    url: '/main'
+  $urlRouterProvider.otherwise '/events/list'
+
+  $stateProvider.state 'events',
+    url: '/events'
     abstract: true
     templateUrl: 'templates/tabs.html'
-  .state 'main.list',
+  .state 'events.list',
     url: '/list'
     views: 'tab-list':
       templateUrl: 'templates/list.html'
-  .state 'main.listDetail',
+  .state 'events.listDetail',
     url: '/list/detail'
     views: 'tab-list':
       templateUrl: 'templates/list-detail.html'
-  .state 'main.debug',
-    url: '/debug'
+  .state 'events.about',
+    url: '/about'
     views: 'tab-debug':
-      templateUrl: 'templates/debug.html'
-      controller: 'DebugCtrl as ctrl'
+      templateUrl: 'templates/about/about.html'
 

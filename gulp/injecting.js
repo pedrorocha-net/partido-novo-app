@@ -10,6 +10,8 @@ var wiredep = require('wiredep');
 var mainBowerFiles = require('main-bower-files');
 var coffee = require('gulp-coffee');
 
+var cssGlobbing = require('gulp-css-globbing');
+
 // inject app/**/*.js, bower components, css into index.html
 // inject environment variables into config.js constant
 gulp.task('inject-all', ['coffee','styles', 'bower-fonts-dev', 'wiredep', 'environment', 'build-vars'], function () {
@@ -53,13 +55,14 @@ gulp.task('inject-config', function () {
 gulp.task('styles', function () {
 
   // compile css starting from each module's scss
-  return gulp.src('app/*/styles/!(_)*.scss')
+  return gulp.src('app/assets/styles/main.scss')
+    .pipe(cssGlobbing({ extensions: ['.scss'] }))
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync().on('error', $.sass.logError))
     .pipe($.autoprefixer({ browsers: ['last 2 versions'], remove: false}))
     .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('.tmp/'));
+    .pipe(gulp.dest('.tmp/assets/styles/'));
 });
 
 // build styles to tmp
