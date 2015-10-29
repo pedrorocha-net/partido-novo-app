@@ -1,0 +1,13 @@
+<ion-view>
+  <ion-content>
+    <event ng-repeat="event in vm.events"
+            titulo="{{event.titulo}}"
+            nome="{{ event.endereco_nome }}"
+            rua="{{ event.endereco_rua }}"
+            cidade="{{ event.enderco_cidade }}"
+            bairro="{{ event.endereco_bairro }}"
+            estado="{{ event.endereco_estado }}"
+            descricao="{{ event.link_original }}">
+    </event>
+  </ion-content>
+</ion-view>

@@ -4,7 +4,7 @@ angular.module('main', [
   'ionic-material'
   'ngCordova'
   'ui.router'
-]).config ($stateProvider, $urlRouterProvider) ->
+]).config ($stateProvider, $urlRouterProvider, $httpProvider) ->
 
   $urlRouterProvider.otherwise '/events/list'
 
@@ -15,7 +15,8 @@ angular.module('main', [
   .state 'events.list',
     url: '/list'
     views: 'tab-list':
-      templateUrl: 'templates/list.html'
+      templateUrl: 'templates/events/list.html'
+      controller: 'eventsCtrl as vm'
   .state 'events.listDetail',
     url: '/list/detail'
     views: 'tab-list':
@@ -24,4 +25,7 @@ angular.module('main', [
     url: '/about'
     views: 'tab-debug':
       templateUrl: 'templates/about/about.html'
+
+  $httpProvider.defaults.useXDomain = true;
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
