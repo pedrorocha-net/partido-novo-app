@@ -1,6 +1,6 @@
 <ion-view>
   <ion-content>
-    <event ng-repeat="event in vm.events"
+    <event ng-repeat="event in vm.events track by $index"
             titulo="{{event.titulo}}"
             nome="{{ event.endereco_nome }}"
             rua="{{ event.endereco_rua }}"
@@ -9,7 +9,8 @@
             estado="{{ event.endereco_estado }}"
             link="{{ event.link_original }}"
             inicio="{{ event.data_inicio }}"
-            fim="{{ event.data_termino }}">
+            fim="{{ event.data_termino }}"
+            index="{{ $index }}">
     </event>
   </ion-content>
 </ion-view>

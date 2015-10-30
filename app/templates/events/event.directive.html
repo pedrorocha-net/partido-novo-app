@@ -1,8 +1,8 @@
 <div class="list card stable-bg">
   <div class="item item-button-right">
     <button class="button button-flat button-balanced ink btn-inscrevase" open-url="{{ link }}"> inscreva-se </button>
-    <a ui-sref="events.listDetail">
-       <h2>{{ cidade }} </h2>
+    <a href="#/events/list/detail/{{ index }}">
+       <h2>{{ cidade }}</h2>
       <p>{{ inicio | momentDate}} <small>(de {{ inicio | momentHours }} até {{ fim | momentHours }})</small></p>
       <h3>{{ titulo }}</h3>
       <span class="item__date-description">{{ nome }}</span>

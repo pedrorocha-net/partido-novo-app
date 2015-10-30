@@ -18,7 +18,7 @@ angular.module('main', [
       templateUrl: 'templates/events/list.html'
       controller: 'eventsCtrl as vm'
   .state 'events.listDetail',
-    url: '/list/detail'
+    url: '/list/detail/:id'
     views: 'tab-list':
       templateUrl: 'templates/list-detail.html'
   .state 'events.about',

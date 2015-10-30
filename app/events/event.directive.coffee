@@ -13,4 +13,5 @@ angular.module('main').directive 'event', ->
       link: '@',
       inicio: '@'
       fim: '@'
+      index: '@'
   }

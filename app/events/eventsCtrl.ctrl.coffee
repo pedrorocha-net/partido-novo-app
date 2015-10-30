@@ -7,10 +7,15 @@ eventsCtrl = (EventsFactory, $scope, $ionicLoading) ->
     template: 'Carregando eventos...'
   })
 
-  EventsFactory.getEvents().then (result) ->
-    vm.events = result.data;
+  if EventsFactory.getEventsObject() == ''
+    EventsFactory.getEvents().then (result) ->
+      vm.events = result.data;
+      EventsFactory.setEvents(result.data);
+      $ionicLoading.hide()
+      return
+  else
+    vm.events = EventsFactory.getEventsObject()
     $ionicLoading.hide()
-    return
 
   return
 
