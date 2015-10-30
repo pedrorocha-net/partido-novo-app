@@ -1,16 +1,19 @@
 'use strict'
 
-eventsCtrl = (EventsFactory, $scope) ->
+eventsCtrl = (EventsFactory, $scope, $ionicLoading) ->
   vm = this
 
+  $ionicLoading.show({
+    template: 'Carregando eventos...'
+  })
+
   EventsFactory.getEvents().then (result) ->
-    console.log result.data;
     vm.events = result.data;
-    console.log moment.unix(result.data[1].data_inicio).format("HH:mm:ss");
+    $ionicLoading.hide()
     return
 
   return
 
 angular.module('main').controller 'eventsCtrl', eventsCtrl
 
-eventsCtrl.$inject = ['EventsFactory', '$scope']
+eventsCtrl.$inject = ['EventsFactory', '$scope', $ionicLoading]
