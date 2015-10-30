@@ -6,7 +6,7 @@ eventsCtrl = (EventsFactory, $scope) ->
   EventsFactory.getEvents().then (result) ->
     console.log result.data;
     vm.events = result.data;
-    console.log moment.unix(result.data[1].data_inicio);
+    console.log moment.unix(result.data[1].data_inicio).format("HH:mm:ss");
     return
 
   return
