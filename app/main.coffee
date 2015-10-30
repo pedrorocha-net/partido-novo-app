@@ -20,7 +20,8 @@ angular.module('main', [
   .state 'events.listDetail',
     url: '/list/detail/:id'
     views: 'tab-list':
-      templateUrl: 'templates/list-detail.html'
+      templateUrl: 'templates/events/event-detail.html'
+      controller: 'eventsCtrl as vm'
   .state 'events.about',
     url: '/about'
     views: 'tab-debug':

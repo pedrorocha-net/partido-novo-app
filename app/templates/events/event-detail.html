@@ -1,0 +1,18 @@
+<ion-view view-title="{{ vm.eventSelected.titulo }}">
+  <!-- do you want padding -->
+  <ion-content class="padding">
+    <h2>{{ vm.eventSelected.endereco_cidade }}</h2>
+    <p>{{ vm.eventSelected.data_inicio | momentDate}} <small>(de {{ vm.eventSelected.data_inicio | momentHours }} até {{ vm.eventSelected.data_termino | momentHours }})</small></p>
+    <h3>{{ vm.eventSelected.titulo }}</h3>
+    <span class="item__date-description">{{ vm.eventSelected.endereco_nome }}</span>
+    <address class="item__address">
+      <span>
+        {{ vm.eventSelected.endereco_rua }},
+        {{ vm.eventSelected.endereco_bairro }},
+        {{ vm.eventSelected.endereco_cidade }} -
+        {{ vm.eventSelected.endereco_estado }}
+      </span>
+    </address>
+    <button class="button button-flat button-balanced ink btn-inscrevase" open-url="{{ vm.eventSelected.link_original }}"> inscreva-se </button>
+  </ion-content>
+</ion-view>

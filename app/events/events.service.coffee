@@ -15,10 +15,15 @@ EventsFactory = ($http) ->
       events = JSON.parse events
     events
 
+  @getEvent = (index) ->
+    event = JSON.parse localStorage.getItem('events')
+    event[index]
+
   return {
     getEvents: @getEvents
     setEvents: @setEvents
     getEventsObject: @getEventsObject
+    getEvent: @getEvent
   }
 
 angular.module('main').factory 'EventsFactory', EventsFactory
