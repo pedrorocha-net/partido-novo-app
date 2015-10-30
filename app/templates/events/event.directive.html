@@ -1,9 +1,10 @@
 <div class="list card stable-bg">
   <div class="item item-button-right">
-    <button class="button button-flat button-balanced ink btn-inscrevase" ng-click= "vm.openTicket('{{ link }}')"> inscreva-se </button>
+    <button class="button button-flat button-balanced ink btn-inscrevase" open-url="{{ link }}"> inscreva-se </button>
     <a ui-sref="events.listDetail">
       <h2>{{ cidade }}</h2>
       <h3>{{ titulo }}</h3>
+      <p>{{ inicio | date}}</p>
       <span class="item__date-description">{{ nome }}</span>
       <address class="item__address">
         <span>{{ rua }}, {{ bairro }}, {{ cidade }} - {{ estado }} </span>

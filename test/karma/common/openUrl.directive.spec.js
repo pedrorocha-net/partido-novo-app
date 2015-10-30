@@ -1,6 +1,6 @@
 'use strict';
 
-describe('module: main, directive: event', function(){
+describe('module: main, directive: openUrl', function(){
 
   // load the directive's module
   beforeEach(module('main'));
@@ -15,8 +15,8 @@ describe('module: main, directive: event', function(){
   }));
 
   it('should show text', inject(function($compile){
-    element = angular.element('<event></event>');
+    element = angular.element('<open-url></open-url>');
     element = $compile(element)($rootScope);
-    expect(element.text()).toBe('this is the event directive');
+    expect(element.text()).toBe('this is the openUrl directive');
   }));
 });
