@@ -16,4 +16,4 @@ eventsCtrl = (EventsFactory, $scope, $ionicLoading) ->
 
 angular.module('main').controller 'eventsCtrl', eventsCtrl
 
-eventsCtrl.$inject = ['EventsFactory', '$scope', $ionicLoading]
+eventsCtrl.$inject = ['EventsFactory', '$scope', '$ionicLoading']
