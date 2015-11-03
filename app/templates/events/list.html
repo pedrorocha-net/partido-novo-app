@@ -1,16 +1,6 @@
 <ion-view>
   <ion-content>
-    <event ng-repeat="event in vm.events track by $index"
-            titulo="{{event.titulo}}"
-            nome="{{ event.endereco_nome }}"
-            rua="{{ event.endereco_rua }}"
-            cidade="{{ event.endereco_cidade }}"
-            bairro="{{ event.endereco_bairro }}"
-            estado="{{ event.endereco_estado }}"
-            link="{{ event.link_original }}"
-            inicio="{{ event.data_inicio }}"
-            fim="{{ event.data_termino }}"
-            index="{{ event.id }}">
+    <event ng-repeat="event in vm.events track by $index" event="event" see-location="seeLocation(event)">
     </event>
   </ion-content>
 </ion-view>

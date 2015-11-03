@@ -4,6 +4,7 @@ angular.module('main', [
   'ionic-material'
   'ngCordova'
   'ui.router'
+  'uiGmapgoogle-maps'
 ]).config ($stateProvider, $urlRouterProvider, $httpProvider) ->
 
   $urlRouterProvider.otherwise '/events/list'
@@ -26,6 +27,11 @@ angular.module('main', [
     url: '/about'
     views: 'tab-debug':
       templateUrl: 'templates/about/about.html'
+  .state 'events.location',
+    url: '/location'
+    views: 'tab-debug':
+      templateUrl: 'templates/map.html'
+      controller: 'eventsCtrl as vm'
 
   $httpProvider.defaults.useXDomain = true;
   delete $httpProvider.defaults.headers.common['X-Requested-With'];

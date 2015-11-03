@@ -1,13 +1,18 @@
 <div class="list card stable-bg">
   <div class="item item-button-right">
-    <button class="button button-flat button-balanced ink btn-inscrevase" open-url="{{ link }}"> inscreva-se </button>
-    <a href="#/events/list/detail/{{ index }}">
-       <h2>{{ cidade }}</h2>
-      <p>{{ inicio | momentDate}} <small>(de {{ inicio | momentHours }} até {{ fim | momentHours }})</small></p>
-      <h3>{{ titulo }}</h3>
-      <span class="item__date-description">{{ nome }}</span>
+    <button class="button button-flat button-balanced ink btn-inscrevase" open-url="{{ event.link_original }}"> inscreva-se </button>
+    <button
+      class="button button-flat button-balanced ink btn-map"
+      ng-click="seeLocation()">
+      ver no mapa
+    </button>
+    <a href="#/events/list/detail/{{ event.id }}">
+       <h2>{{ event.endereco_cidade }}</h2>
+      <p>{{ event.data_inicio | momentDate}} <small>(de {{ event.data_inicio | momentHours }} até {{ event.data_termino | momentHours }})</small></p>
+      <h3>{{ event.titulo }}</h3>
+      <span class="item__date-description">{{ event.endereco_nome }}</span>
       <address class="item__address">
-        <span>{{ rua }}, {{ bairro }}, {{ cidade }} - {{ estado }} </span>
+        <span>{{ event.endereco_rua }}, {{ event.endereco_bairro }}, {{ event.endereco_cidade }} - {{ event.endereco_estado }} </span>
       </address>
     </a>
   </div>

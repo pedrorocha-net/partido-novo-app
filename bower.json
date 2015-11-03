@@ -3,6 +3,7 @@
     "angular": "~1.4.5",
     "angular-animate": "~1.4.5",
     "angular-dynamic-locale": "~0.1.27",
+    "angular-google-maps": "~2.2.1",
     "angular-localForage": "~1.2.3",
     "angular-sanitize": "~1.4.5",
     "angular-translate": "~2.7.2",

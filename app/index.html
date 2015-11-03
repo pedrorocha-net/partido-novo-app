@@ -29,7 +29,7 @@
   </head>
   <body ng-app="partidoNovo">
 
-    <ion-header-bar class="bar bar-balanced" align-title="left">
+    <ion-header-bar class="bar bar-assertive " align-title="left">
       <a ui-sref="events.list">
         <img src=" http://placehold.it/100x36" alt="">
       </a>
@@ -46,22 +46,25 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
-    <script src="bower_components/localforage/dist/localforage.js"></script>
-    <script src="bower_components/angular-localForage/dist/angular-localForage.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-translate/angular-translate.js"></script>
-    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/ionic/release/js/ionic.js"></script>
-    <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
-    <script src="bower_components/waves/dist/waves.min.js"></script>
-    <script src="bower_components/ionic-material/dist/ionic.material.js"></script>
-    <script src="bower_components/ionic-material/dist/ionic.material.min.js"></script>
-    <script src="bower_components/moment/moment.js"></script>
-    <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+    <script src='bower_components/angular/angular.js'></script>
+    <script src='bower_components/angular-animate/angular-animate.js'></script>
+    <script src='bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js'></script>
+    <script src='bower_components/angular-simple-logger/dist/angular-simple-logger.js'></script>
+    <script src='bower_components/lodash/lodash.js'></script>
+    <script src='bower_components/angular-google-maps/dist/angular-google-maps.js'></script>
+    <script src='bower_components/localforage/dist/localforage.js'></script>
+    <script src='bower_components/angular-localForage/dist/angular-localForage.js'></script>
+    <script src='bower_components/angular-sanitize/angular-sanitize.js'></script>
+    <script src='bower_components/angular-translate/angular-translate.js'></script>
+    <script src='bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js'></script>
+    <script src='bower_components/angular-ui-router/release/angular-ui-router.js'></script>
+    <script src='bower_components/ionic/release/js/ionic.js'></script>
+    <script src='bower_components/ionic/release/js/ionic-angular.js'></script>
+    <script src='bower_components/waves/dist/waves.min.js'></script>
+    <script src='bower_components/ionic-material/dist/ionic.material.js'></script>
+    <script src='bower_components/ionic-material/dist/ionic.material.min.js'></script>
+    <script src='bower_components/moment/moment.js'></script>
+    <script src='bower_components/ngCordova/dist/ng-cordova.js'></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -69,11 +72,12 @@
     <!-- inject:js -->
     <script src="main.js"></script>
     <script src="events/eventsCtrl.ctrl.js"></script>
-    <script src="events/events.service.js"></script>
+    <script src="events/events.factory.js"></script>
     <script src="events/event.directive.js"></script>
     <script src="common/openUrl.directive.js"></script>
     <script src="common/momentHours.filter.js"></script>
     <script src="common/momentDate.filter.js"></script>
+    <script src="common/GeoUtils.factory.js"></script>
     <script src="app.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
@@ -81,5 +85,7 @@
     <!-- inject:conf -->
     <script src="constants/Config.constant.js"></script>
     <!-- endinject -->
+
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
   </body>
 </html>
