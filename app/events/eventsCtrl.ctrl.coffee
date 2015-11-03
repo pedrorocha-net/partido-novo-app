@@ -22,8 +22,6 @@ eventsCtrl = (EventsFactory, $scope, $ionicLoading, $state, $stateParams) ->
   if $state.current.name == 'events.listDetail'
     id = $stateParams.id
     vm.eventSelected = EventsFactory.getEvent(id)
-
-
   return
 
 angular.module('main').controller 'eventsCtrl', eventsCtrl

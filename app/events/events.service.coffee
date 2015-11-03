@@ -15,9 +15,12 @@ EventsFactory = ($http) ->
       events = JSON.parse events
     events
 
-  @getEvent = (index) ->
-    event = JSON.parse localStorage.getItem('events')
-    event[index]
+  @getEvent = (id) ->
+    events = JSON.parse localStorage.getItem('events')
+
+    for event in events
+      if event.id == id
+        return event;
 
   return {
     getEvents: @getEvents
