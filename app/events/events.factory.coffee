@@ -22,11 +22,24 @@ EventsFactory = ($http) ->
       if event.id == id
         return event;
 
+  @setSelectedEventLocation = (event) ->
+    localStorage.removeItem 'SelectedEventLocation'
+    localStorage.setItem 'SelectedEventLocation', JSON.stringify(event)
+    return
+
+  @getSelectedEventLocation = () ->
+    event = localStorage.getItem('SelectedEventLocation') || ''
+    if event != ''
+      event = JSON.parse event
+    event
+
   return {
     getEvents: @getEvents
     setEvents: @setEvents
     getEventsObject: @getEventsObject
     getEvent: @getEvent
+    setSelectedEventLocation: @setSelectedEventLocation
+    getSelectedEventLocation: @getSelectedEventLocation
   }
 
 angular.module('main').factory 'EventsFactory', EventsFactory

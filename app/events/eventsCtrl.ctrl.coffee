@@ -1,24 +1,43 @@
 'use strict'
 
-eventsCtrl = (EventsFactory, $scope, $ionicLoading, $state, $stateParams,GeoUtilsFactory, uiGmapGoogleMapApi, uiGmapIsReady) ->
+eventsCtrl = (EventsFactory, $scope, $ionicLoading, $state, $stateParams, GeoUtilsFactory, $location) ->
   vm = this
 
-  $scope.map =
-    center:
-      latitude: 37.78
-      longitude: -122.41
-    zoom: 14
-    control: {}
-
-  # uiGmapIsReady.then = (maps) ->
-  #   $scope.map.control.refresh({latitude: $scope.map.center.latitude, longitude: $scope.map.center.longitude})
-
   $scope.seeLocation = (event) ->
-    GeoUtilsFactory.getCoordinates(event).then (response) ->
-      $scope.map.center.latitude  = response.data.results[0].geometry.location.lat
-      $scope.map.center.longitude = response.data.results[0].geometry.location.lng
-      $state.go('events.location')
+    EventsFactory.setSelectedEventLocation(event)
+    $state.go('events.location')
+    refreshMap()
     return
+
+  refreshMap = () ->
+    $ionicLoading.show({
+      template: 'Carregando Localizaçao...'
+    })
+    event = EventsFactory.getSelectedEventLocation()
+
+    GeoUtilsFactory.getCoordinates(event).then (response) ->
+      lat = response.data.results[0].geometry.location.lat
+      lon = response.data.results[0].geometry.location.lng
+      Latlng = new google.maps.LatLng(lat, lon)
+
+      mapOptions =
+        center: Latlng
+        zoom: 16
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+
+
+      map = new google.maps.Map(document.getElementById("map"), mapOptions)
+
+      map.setCenter(new google.maps.LatLng(lat, lon))
+
+      marker = new google.maps.Marker({
+          position: new google.maps.LatLng(lat, lon)
+          map: map
+          title: ""
+      })
+
+      $scope.map = map
+      $ionicLoading.hide()
 
   if $state.current.name == 'events.list'
     $ionicLoading.show({
@@ -42,4 +61,4 @@ eventsCtrl = (EventsFactory, $scope, $ionicLoading, $state, $stateParams,GeoUtil
 
 angular.module('main').controller 'eventsCtrl', eventsCtrl
 
-eventsCtrl.$inject = ['EventsFactory', '$scope', '$ionicLoading', '$state', '$stateParams', 'GeoUtilsFactory', 'uiGmapGoogleMapApi', 'uiGmapIsReady']
+eventsCtrl.$inject = ['EventsFactory', '$scope', '$ionicLoading', '$state', '$stateParams', 'GeoUtilsFactory', '$location']

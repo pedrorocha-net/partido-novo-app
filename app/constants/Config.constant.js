@@ -1,7 +1,7 @@
 'use strict';
 
 (function(){
-  angular.module('partidoNovo')
+  angular.module('main')
   .constant('Config', {
       // gulp environment: injects environment vars
     // https://github.com/mwaylabs/generator-m-ionic#gulp-environment

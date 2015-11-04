@@ -4,7 +4,6 @@ angular.module('main', [
   'ionic-material'
   'ngCordova'
   'ui.router'
-  'uiGmapgoogle-maps'
 ]).config ($stateProvider, $urlRouterProvider, $httpProvider) ->
 
   $urlRouterProvider.otherwise '/events/list'

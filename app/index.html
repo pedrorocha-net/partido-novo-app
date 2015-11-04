@@ -27,7 +27,7 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body ng-app="partidoNovo">
+  <body ng-app="main">
 
     <ion-header-bar class="bar bar-assertive " align-title="left">
       <a ui-sref="events.list">
@@ -46,25 +46,22 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src='bower_components/angular/angular.js'></script>
-    <script src='bower_components/angular-animate/angular-animate.js'></script>
-    <script src='bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js'></script>
-    <script src='bower_components/angular-simple-logger/dist/angular-simple-logger.js'></script>
-    <script src='bower_components/lodash/lodash.js'></script>
-    <script src='bower_components/angular-google-maps/dist/angular-google-maps.js'></script>
-    <script src='bower_components/localforage/dist/localforage.js'></script>
-    <script src='bower_components/angular-localForage/dist/angular-localForage.js'></script>
-    <script src='bower_components/angular-sanitize/angular-sanitize.js'></script>
-    <script src='bower_components/angular-translate/angular-translate.js'></script>
-    <script src='bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js'></script>
-    <script src='bower_components/angular-ui-router/release/angular-ui-router.js'></script>
-    <script src='bower_components/ionic/release/js/ionic.js'></script>
-    <script src='bower_components/ionic/release/js/ionic-angular.js'></script>
-    <script src='bower_components/waves/dist/waves.min.js'></script>
-    <script src='bower_components/ionic-material/dist/ionic.material.js'></script>
-    <script src='bower_components/ionic-material/dist/ionic.material.min.js'></script>
-    <script src='bower_components/moment/moment.js'></script>
-    <script src='bower_components/ngCordova/dist/ng-cordova.js'></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="bower_components/localforage/dist/localforage.js"></script>
+    <script src="bower_components/angular-localForage/dist/angular-localForage.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ionic/release/js/ionic.js"></script>
+    <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+    <script src="bower_components/waves/dist/waves.min.js"></script>
+    <script src="bower_components/ionic-material/dist/ionic.material.js"></script>
+    <script src="bower_components/ionic-material/dist/ionic.material.min.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -78,6 +75,22 @@
     <script src="common/momentHours.filter.js"></script>
     <script src="common/momentDate.filter.js"></script>
     <script src="common/GeoUtils.factory.js"></script>
+    <script src="bower_components/angular-simple-logger/src/logger.js"></script>
+    <script src="bower_components/angular-simple-logger/spec/logger.spec.js"></script>
+    <script src="bower_components/angular-simple-logger/karma.conf.js"></script>
+    <script src="bower_components/angular-simple-logger/gulpfile.js"></script>
+    <script src="bower_components/angular-simple-logger/gulp/tasks/spec.js"></script>
+    <script src="bower_components/angular-simple-logger/gulp/tasks/index.js"></script>
+    <script src="bower_components/angular-simple-logger/gulp/tasks/clean.js"></script>
+    <script src="bower_components/angular-simple-logger/gulp/tasks/build.js"></script>
+    <script src="bower_components/angular-simple-logger/gulp/index.js"></script>
+    <script src="bower_components/angular-google-maps/spec/coffee/helpers/initiator.js"></script>
+    <script src="bower_components/angular-google-maps/spec/coffee/helpers/helper.polyline.spec.js"></script>
+    <script src="bower_components/angular-google-maps/spec/coffee/helpers/helper.mockEvents.spec.js"></script>
+    <script src="bower_components/angular-google-maps/spec/coffee/helpers/google-map-spec-controller.js"></script>
+    <script src="bower_components/angular-google-maps/spec/coffee/helpers/google-api-mock.js"></script>
+    <script src="bower_components/angular-google-maps/spec/coffee/bootstrap.js"></script>
+    <script src="bower_components/angular-google-maps/Gruntfile.js"></script>
     <script src="app.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
@@ -86,6 +99,6 @@
     <script src="constants/Config.constant.js"></script>
     <!-- endinject -->
 
-    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
   </body>
 </html>
