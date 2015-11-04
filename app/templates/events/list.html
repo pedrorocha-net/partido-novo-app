@@ -1,6 +1,10 @@
 <ion-view>
   <ion-content>
-    <event ng-repeat="event in vm.events track by $index" event="event" see-location="seeLocation(event)">
+    <event
+      ng-repeat="event in vm.events track by $index"
+      event="event"
+      see-location="seeLocation(event)"
+      add-to-calendar="addToCalendar(event)">
     </event>
   </ion-content>
 </ion-view>

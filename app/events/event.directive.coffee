@@ -6,5 +6,6 @@ angular.module('main').directive 'event', ->
     scope:
       event: '='
       seeLocation: '&'
+      addToCalendar: '&'
 
   }

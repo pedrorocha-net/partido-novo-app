@@ -1,6 +1,6 @@
 'use strict'
 
-eventsCtrl = (EventsFactory, $scope, $ionicLoading, $state, $stateParams, GeoUtilsFactory, $location) ->
+eventsCtrl = (EventsFactory, $scope, $ionicLoading, $state, $stateParams, GeoUtilsFactory, $cordovaCalendar) ->
   vm = this
 
   $scope.seeLocation = (event) ->
@@ -8,6 +8,24 @@ eventsCtrl = (EventsFactory, $scope, $ionicLoading, $state, $stateParams, GeoUti
     $state.go('events.location')
     refreshMap()
     return
+
+  $scope.addToCalendar = (event) ->
+    location = event.endereco_nome + '-' + event.endereco_rua + ',' + event.endereco_bairro + ',' + event.endereco_cidade + '-' + event.endereco_estado
+
+    $cordovaCalendar.createEvent(
+      title: event.titulo
+      location: location
+      notes: event.link_original
+      startDate: moment.unix(event.data_inicio)._d
+      endDate: moment.unix(event.data_termino)._d).then ((result) ->
+      message = 'Evento: ' + event.titulo + 'adicionado com sucesso!'
+      alert(message)
+      return
+    ), (err) ->
+      alert 'nao foi possivel adicionar o evento ao seu calendario'
+      return
+
+
 
   refreshMap = () ->
     $ionicLoading.show({
@@ -61,4 +79,4 @@ eventsCtrl = (EventsFactory, $scope, $ionicLoading, $state, $stateParams, GeoUti
 
 angular.module('main').controller 'eventsCtrl', eventsCtrl
 
-eventsCtrl.$inject = ['EventsFactory', '$scope', '$ionicLoading', '$state', '$stateParams', 'GeoUtilsFactory', '$location']
+eventsCtrl.$inject = ['EventsFactory', '$scope', '$ionicLoading', '$state', '$stateParams', 'GeoUtilsFactory', '$cordovaCalendar']
