@@ -2,6 +2,6 @@
 
 momentHours = ->
   (input) ->
-    return moment.unix(input).format("HH:mm:ss");
+    return moment.unix(input).format("HH:mm");
 
 angular.module('app').filter 'momentHours', momentHours
