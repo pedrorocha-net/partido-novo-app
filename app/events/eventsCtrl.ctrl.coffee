@@ -18,13 +18,11 @@ eventsCtrl = (eventsFactory, $scope, $ionicLoading, $state, $stateParams, geoUti
       notes: event.link_original
       startDate: moment.unix(event.data_inicio)._d
       endDate: moment.unix(event.data_termino)._d).then ((result) ->
-      message = 'Evento: ' + event.titulo + 'adicionado com sucesso!'
-      alert(message)
+      alert('evento adicionado com sucesso!')
       return
     ), (err) ->
-      alert 'nao foi possivel adicionar o evento ao seu calendario'
+      alert('nao foi possivel adicionar o evento!')
       return
-
 
 
   refreshMap = () ->
