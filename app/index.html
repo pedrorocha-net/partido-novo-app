@@ -27,7 +27,7 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body ng-app="main">
+  <body ng-app="app">
 
     <ion-header-bar class="bar bar-assertive " align-title="left">
       <a ui-sref="events.list">
@@ -68,13 +68,9 @@
     <!-- build:js scripts/app.js -->
     <!-- inject:js -->
     <script src="main.js"></script>
-    <script src="main/main.service.js"></script>
-    <script src="main/DebugCtrl.ctrl.js"></script>
-    <script src="events/eventsCtrl.ctrl.js"></script>
-    <script src="events/events.service.js"></script>
-    <script src="events/events.factory.js"></script>
     <script src="app.js"></script>
-    <script src="events/events.ctrl.js"></script>
+    <script src="events/eventsCtrl.ctrl.js"></script>
+    <script src="events/events.factory.js"></script>
     <script src="events/event.directive.js"></script>
     <script src="common/openUrl.directive.js"></script>
     <script src="common/momentHours.filter.js"></script>

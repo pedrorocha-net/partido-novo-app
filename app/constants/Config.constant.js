@@ -1,7 +1,7 @@
 'use strict';
 
 (function(){
-  angular.module('main')
+  angular.module('app')
   .constant('Config', {
       // gulp environment: injects environment vars
     // https://github.com/mwaylabs/generator-m-ionic#gulp-environment

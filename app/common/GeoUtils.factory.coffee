@@ -1,8 +1,8 @@
 
 'use strict'
 
-GeoUtilsFactory = ($http) ->
-  GoogleApiUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address='
+geoUtilsFactory = ($http) ->
+  googleApiUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address='
 
   @getCoordinates = (event) ->
     address = [
@@ -15,15 +15,15 @@ GeoUtilsFactory = ($http) ->
 
     address = address.join('+')
 
-    return $http.get(GoogleApiUrl + address);
+    return $http.get(googleApiUrl + address);
 
 
   return {
     getCoordinates: @getCoordinates
   }
 
-angular.module('main').factory 'GeoUtilsFactory', GeoUtilsFactory
+angular.module('app').factory 'geoUtilsFactory', geoUtilsFactory
 
-GeoUtilsFactory.$inject = ['$http']
+geoUtilsFactory.$inject = ['$http']
 
 

@@ -1,7 +1,7 @@
 
 'use strict'
 
-EventsFactory = ($http) ->
+eventsFactory = ($http) ->
   @getEvents = () ->
     return $http.get('http://dev-partido-novo-app.pantheon.io/api/1/eventos/proximos')
 
@@ -42,6 +42,6 @@ EventsFactory = ($http) ->
     getSelectedEventLocation: @getSelectedEventLocation
   }
 
-angular.module('main').factory 'EventsFactory', EventsFactory
+angular.module('app').factory 'eventsFactory', eventsFactory
 
-EventsFactory.$inject = ['$http']
+eventsFactory.$inject = ['$http']

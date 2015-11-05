@@ -1,5 +1,5 @@
 'use strict'
-angular.module('main').directive 'openUrl', ->
+angular.module('app').directive 'openUrl', ->
   {
     restrict: 'A'
     link: (scope, element, attrs) ->

@@ -1,5 +1,5 @@
 'use strict'
-angular.module('main').directive 'event', ->
+angular.module('app').directive 'event', ->
   {
     templateUrl: 'templates/events/event.directive.html'
     restrict: 'E'

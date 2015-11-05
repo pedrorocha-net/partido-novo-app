@@ -1,10 +1,10 @@
 'use strict'
 
-eventsCtrl = (EventsFactory, $scope, $ionicLoading, $state, $stateParams, GeoUtilsFactory, $cordovaCalendar) ->
+eventsCtrl = (eventsFactory, $scope, $ionicLoading, $state, $stateParams, geoUtilsFactory, $cordovaCalendar) ->
   vm = this
 
   $scope.seeLocation = (event) ->
-    EventsFactory.setSelectedEventLocation(event)
+    eventsFactory.setSelectedEventLocation(event)
     $state.go('events.location')
     refreshMap()
     return
@@ -31,9 +31,9 @@ eventsCtrl = (EventsFactory, $scope, $ionicLoading, $state, $stateParams, GeoUti
     $ionicLoading.show({
       template: 'Carregando Localizaçao...'
     })
-    event = EventsFactory.getSelectedEventLocation()
+    event = eventsFactory.getSelectedEventLocation()
 
-    GeoUtilsFactory.getCoordinates(event).then (response) ->
+    geoUtilsFactory.getCoordinates(event).then (response) ->
       lat = response.data.results[0].geometry.location.lat
       lon = response.data.results[0].geometry.location.lng
       Latlng = new google.maps.LatLng(lat, lon)
@@ -62,21 +62,21 @@ eventsCtrl = (EventsFactory, $scope, $ionicLoading, $state, $stateParams, GeoUti
       template: 'Carregando eventos...'
     })
 
-    if EventsFactory.getEventsObject() == ''
-      EventsFactory.getEvents().then (result) ->
+    if eventsFactory.getEventsObject() == ''
+      eventsFactory.getEvents().then (result) ->
         vm.events = result.data;
-        EventsFactory.setEvents(result.data);
+        eventsFactory.setEvents(result.data);
         $ionicLoading.hide()
         return
     else
-      vm.events = EventsFactory.getEventsObject()
+      vm.events = eventsFactory.getEventsObject()
       $ionicLoading.hide()
 
   if $state.current.name == 'events.listDetail'
     id = $stateParams.id
-    vm.eventSelected = EventsFactory.getEvent(id)
+    vm.eventSelected = eventsFactory.getEvent(id)
   return
 
-angular.module('main').controller 'eventsCtrl', eventsCtrl
+angular.module('app').controller 'eventsCtrl', eventsCtrl
 
-eventsCtrl.$inject = ['EventsFactory', '$scope', '$ionicLoading', '$state', '$stateParams', 'GeoUtilsFactory', '$cordovaCalendar']
+eventsCtrl.$inject = ['eventsFactory', '$scope', '$ionicLoading', '$state', '$stateParams', 'geoUtilsFactory', '$cordovaCalendar']
