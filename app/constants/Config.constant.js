@@ -7,7 +7,8 @@
     // https://github.com/mwaylabs/generator-m-ionic#gulp-environment
     ENV: {
       /*inject-env*/
-      'SERVER_URL': 'https://DEVSERVER/api'
+      'api_eventosURl': 'http://dev-partido-novo-app.pantheon.io/api/1/eventos/proximos',
+    'googleApiUrl': 'https://maps.googleapis.com/maps/api/geocode/json?address='
       /*endinject*/
     },
     // gulp build-vars: injects build vars

@@ -1,8 +1,8 @@
 
 'use strict'
 
-geoUtilsFactory = ($http) ->
-  googleApiUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address='
+geoUtilsFactory = ($http, Config) ->
+  googleApiUrl = Config.ENV.googleApiUrl
 
   @getCoordinates = (event) ->
     address = [
@@ -24,6 +24,6 @@ geoUtilsFactory = ($http) ->
 
 angular.module('app').factory 'geoUtilsFactory', geoUtilsFactory
 
-geoUtilsFactory.$inject = ['$http']
+geoUtilsFactory.$inject = ['$http', 'Config']
 
 
