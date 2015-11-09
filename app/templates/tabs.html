@@ -1,15 +1,22 @@
 <ion-tabs class="tabs-icon-top tabs-assertive">
 
   <!-- List Tab -->
-  <ion-tab title="List" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong"
+  <ion-tab title="Eventos" icon-off="ion-ios-calendar" icon-on="ion-ios-calendar"
     ui-sref="events.list">
-    <ion-nav-view name="tab-list"></ion-nav-view>
+    <ion-nav-view name="tab-events"></ion-nav-view>
+  </ion-tab>
+
+    <!-- video Tab -->
+  <ion-tab title="Videos" icon-off="ion-play" icon-on="ion-play"
+    ui-sref="videos.list">
+    <ion-nav-view name="tab-video"></ion-nav-view>
   </ion-tab>
 
   <!-- Debug Tab -->
-  <ion-tab title="Debug" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear"
-    ui-sref="events.debug">
-    <ion-nav-view name="tab-debug"></ion-nav-view>
+  <ion-tab title="Sobre" icon-off="ion-ios-plus" icon-on="ion-ios-plus"
+    ui-sref="events.about">
+    <ion-nav-view name="tab-about"></ion-nav-view>
   </ion-tab>
+
 
 </ion-tabs>
