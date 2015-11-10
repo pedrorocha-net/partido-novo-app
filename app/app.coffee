@@ -11,24 +11,24 @@ angular.module('app', [
   $stateProvider.state 'events',
     url: '/events'
     abstract: true
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/menu.html'
   .state 'events.list',
     url: '/list'
-    views: 'tab-events':
+    views: 'pageContent':
       templateUrl: 'templates/events/list.html'
       controller: 'eventsCtrl as vm'
   .state 'events.listDetail',
     url: '/list/detail/:id'
-    views: 'tab-events':
+    views: 'pageContent':
       templateUrl: 'templates/events/event-detail.html'
       controller: 'eventsCtrl as vm'
   .state 'events.about',
     url: '/about'
-    views: 'tab-about':
+    views: 'pageContent':
       templateUrl: 'templates/about/about.html'
   .state 'events.location',
     url: '/location'
-    views: 'tab-about':
+    views: 'pageContent':
       templateUrl: 'templates/map.html'
       controller: 'eventsCtrl as vm'
   .state 'videos',
@@ -37,7 +37,7 @@ angular.module('app', [
     templateUrl: 'templates/tabs.html'
   .state 'videos.list',
     url: '/list'
-    views: 'tab-video':
+    views: 'pageContent':
       templateUrl: 'templates/videos/list.html'
 
   $httpProvider.defaults.useXDomain = true;
