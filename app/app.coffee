@@ -6,7 +6,7 @@ angular.module('app', [
   'ui.router'
 ]).config ($stateProvider, $urlRouterProvider, $httpProvider) ->
 
-  $urlRouterProvider.otherwise '/events/list'
+  $urlRouterProvider.otherwise '/about/partidonovo'
 
   $stateProvider.state 'events',
     url: '/events'
@@ -22,19 +22,27 @@ angular.module('app', [
     views: 'pageContent':
       templateUrl: 'templates/events/event-detail.html'
       controller: 'eventsCtrl as vm'
-  .state 'events.about',
-    url: '/about'
-    views: 'pageContent':
-      templateUrl: 'templates/about/about.html'
   .state 'events.location',
     url: '/location'
     views: 'pageContent':
       templateUrl: 'templates/map.html'
       controller: 'eventsCtrl as vm'
+  .state 'about',
+    url: '/about'
+    abstract: true
+    templateUrl: 'templates/menu.html'
+  .state 'about.partidonovo',
+    url: '/partidonovo'
+    views: 'pageContent':
+      templateUrl: 'templates/about/partidonovo.html'
+  .state 'about.app',
+    url: '/app'
+    views: 'pageContent':
+      templateUrl: 'templates/about/about.html'
   .state 'videos',
     url: '/videos'
     abstract: true
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/menu.html'
   .state 'videos.list',
     url: '/list'
     views: 'pageContent':
