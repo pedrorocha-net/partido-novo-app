@@ -12,9 +12,14 @@ var coffee = require('gulp-coffee');
 
 var cssGlobbing = require('gulp-css-globbing');
 
+var gulpsync = require('gulp-sync')(gulp);
+
 // inject app/**/*.js, bower components, css into index.html
 // inject environment variables into config.js constant
-gulp.task('inject-all', ['coffee','styles', 'bower-fonts-dev', 'wiredep', 'environment', 'build-vars'], function () {
+
+gulp.task('inject-dep', gulpsync.sync(['clean','coffee','styles', 'bower-fonts-dev', 'wiredep', 'environment', 'build-vars']));
+
+gulp.task('inject-all', ['inject-dep'], function () {
 
   return gulp.src('app/index.html')
     .pipe(
