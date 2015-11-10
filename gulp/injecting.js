@@ -46,7 +46,7 @@ gulp.task('inject-config', function () {
   return gulp.src('app/index.html')
     .pipe(
       $.inject(
-        gulp.src('app/constants/Config.constant.js'),
+        gulp.src('app/constants/*.js'),
         {
           starttag: '<!-- inject:conf -->',
           endtag: '<!-- endinject -->',

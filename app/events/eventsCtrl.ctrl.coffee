@@ -1,6 +1,6 @@
 'use strict'
 
-eventsCtrl = (eventsFactory, $scope, $ionicLoading, $state, $stateParams, geoUtilsFactory, $cordovaCalendar) ->
+eventsCtrl = (eventsFactory, $scope, $ionicLoading, $state, $stateParams, geoUtilsFactory, $cordovaCalendar, $http) ->
   vm = this
 
   $scope.seeLocation = (event) ->
@@ -77,4 +77,4 @@ eventsCtrl = (eventsFactory, $scope, $ionicLoading, $state, $stateParams, geoUti
 
 angular.module('app').controller 'eventsCtrl', eventsCtrl
 
-eventsCtrl.$inject = ['eventsFactory', '$scope', '$ionicLoading', '$state', '$stateParams', 'geoUtilsFactory', '$cordovaCalendar']
+eventsCtrl.$inject = ['eventsFactory', '$scope', '$ionicLoading', '$state', '$stateParams', 'geoUtilsFactory', '$cordovaCalendar', '$http']

@@ -46,7 +46,8 @@ angular.module('app', [
   .state 'videos.list',
     url: '/list'
     views: 'pageContent':
-      templateUrl: 'templates/videos/list.html'
+      templateUrl: 'templates/youtube/list.html'
+      controller: 'youtubeCtrl as vm'
 
   $httpProvider.defaults.useXDomain = true;
   delete $httpProvider.defaults.headers.common['X-Requested-With'];
