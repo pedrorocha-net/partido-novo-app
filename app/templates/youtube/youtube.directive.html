@@ -1,0 +1,5 @@
+<a class="item item-thumbnail-left"  open-url="https://www.youtube.com/watch?v={{ video.id.videoId }}">
+  <img ng-src="{{video.snippet.thumbnails.default.url}}">
+  <h2>{{ video.snippet.title }}</h2>
+  <p>{{ video.snippet.publishedAt | date:'dd/MM/yyyy' }}</p>
+</a>

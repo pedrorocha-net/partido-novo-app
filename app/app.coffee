@@ -48,6 +48,15 @@ angular.module('app', [
     views: 'pageContent':
       templateUrl: 'templates/youtube/list.html'
       controller: 'youtubeCtrl as vm'
+  .state 'instagram',
+    url: '/instagram'
+    abstract: true
+    templateUrl: 'templates/menu.html'
+  .state 'instagram.list',
+    url: '/list'
+    views: 'pageContent':
+      templateUrl: 'templates/instagram/list.html'
+      controller: 'instagramCtrl as vm'
 
   $httpProvider.defaults.useXDomain = true;
   delete $httpProvider.defaults.headers.common['X-Requested-With'];

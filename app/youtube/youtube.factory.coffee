@@ -1,11 +1,12 @@
 
 'use strict'
 
-youtubeFactory = ($http) ->
+youtubeFactory = ($http, Config) ->
   @getVideos = () ->
     $http.get('https://www.googleapis.com/youtube/v3/search', params:
-      key: 'AIzaSyA5EciOz3qsV5Gvy4EiLOqvjLu4TvfWLmE'
+      key: Config.ENV.googleApiJsKey
       type: 'video'
+      order: 'relevance'
       part: 'id,snippet'
       fields: '*'
       q: 'partidonovo500')
@@ -16,4 +17,4 @@ youtubeFactory = ($http) ->
 
 angular.module('app').factory 'youtubeFactory', youtubeFactory
 
-youtubeFactory.$inject  = ['$http']
+youtubeFactory.$inject  = ['$http', 'Config']

@@ -1,11 +1,7 @@
 <ion-view view-title="Vídeos do youtube">
   <ion-content>
     <div class="list">
-      <a class="item item-thumbnail-left" ng-repeat="video in vm.videos track by $index" open-url="https://www.youtube.com/watch?v={{ video.id.videoId }}">
-        <img ng-src="{{video.snippet.thumbnails.default.url}}">
-        <h2>{{ video.snippet.title }}</h2>
-        <p>{{ video.snippet.publishedAt | date:'dd/MM/yyyy' }}</p>
-      </a>
-     </div>
+      <youtube ng-repeat="video in vm.videos track by $index" video="video"></youtube>
+    </div>
   </ion-content>
 </ion-view>

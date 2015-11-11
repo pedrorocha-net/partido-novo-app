@@ -1,14 +1,18 @@
 'use strict'
 
-youtubeCtrl = (youtubeFactory) ->
+youtubeCtrl = (youtubeFactory, $ionicLoading) ->
   vm = this
+
+  $ionicLoading.show({
+    template: 'Carregando Videos...'
+  })
 
   youtubeFactory.getVideos().then (data) ->
     vm.videos = data.data.items;
-    console.log vm.videos
+    $ionicLoading.hide()
 
   return
 
 angular.module('app').controller 'youtubeCtrl', youtubeCtrl
 
-youtubeCtrl.$inject = ['youtubeFactory']
+youtubeCtrl.$inject = ['youtubeFactory', '$ionicLoading']

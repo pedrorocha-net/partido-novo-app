@@ -9,7 +9,9 @@
       /*eslint-disable */
       /*inject-env*/
       'api_eventosURl': 'http://dev-partido-novo-app.pantheon.io/api/1/eventos/proximos',
-    'googleApiUrl': 'https://maps.googleapis.com/maps/api/geocode/json?address='
+    'googleApiUrl': 'https://maps.googleapis.com/maps/api/geocode/json?address=',
+    'googleApiJsKey': 'AIzaSyA5EciOz3qsV5Gvy4EiLOqvjLu4TvfWLmE',
+    'clientInstagramID': 'a2b4e3e7da704010a5d87416baec426e'
       /*endinject*/
       /*eslint-enable */
     },
