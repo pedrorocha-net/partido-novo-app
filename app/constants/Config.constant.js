@@ -13,7 +13,15 @@
     'googleApiJsKey': 'AIzaSyA5EciOz3qsV5Gvy4EiLOqvjLu4TvfWLmE',
     'clientInstagramID': 'a2b4e3e7da704010a5d87416baec426e',
     'twitterClientID': '7T4s0Jn3OuVC9VVbh7DT2xKY1',
-    'twitterClientSecret': 'URe94uJ6MZIMr6vHsPWOhUtX2uJlYr8cfMZWU2xda1cElTWhna'
+    'twitterClientSecret': 'URe94uJ6MZIMr6vHsPWOhUtX2uJlYr8cfMZWU2xda1cElTWhna',
+    'oAuthTokenTwitter': {
+      'oauth_token': '313654421-td86jCCGsmStaj12C7ldPXC0oBit30Fr5ZYeCCvw',
+      'oauth_token_secret': 'Ss7ybcf3FdOkhvEHSb1gDrrwhAXAFVLrGcuf8HDS16zso',
+      'user_id': '313654421',
+      'screen_name': 'DielDuarte',
+      'x_auth_expires': '0'
+    },
+    'partidoNovoUserTwitterID': '2734700584'
       /*endinject*/
       /*eslint-enable */
     },

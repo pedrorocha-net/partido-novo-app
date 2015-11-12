@@ -10,7 +10,7 @@
     "ionic-material": "~0.4.2",
     "moment": "~2.10.6",
     "ng-twitter-api": "~0.1.5",
-    "ngCordova": "~0.1.17-alpha"
+    "ngCordova": "master"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.5"

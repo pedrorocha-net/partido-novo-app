@@ -1,7 +1,5 @@
 <ion-view view-title="Nosso Twitter">
   <ion-content>
-    <div class="list">
-      tela twitter
-    </div>
+    <twitter ng-repeat="twitt in vm.twitts track by $index" twitt="twitt"></twitter>
   </ion-content>
 </ion-view>
