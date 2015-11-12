@@ -4,6 +4,7 @@ angular.module('app', [
   'ionic-material'
   'ngCordova'
   'ui.router'
+  'ngTwitter'
 ]).config ($stateProvider, $urlRouterProvider, $httpProvider) ->
 
   $urlRouterProvider.otherwise '/about/partidonovo'
@@ -57,6 +58,15 @@ angular.module('app', [
     views: 'pageContent':
       templateUrl: 'templates/instagram/list.html'
       controller: 'instagramCtrl as vm'
+  .state 'twitter',
+    url: '/twitter'
+    abstract: true
+    templateUrl: 'templates/menu.html'
+  .state 'twitter.list',
+    url: '/list'
+    views: 'pageContent':
+      templateUrl: 'templates/twitter/list.html'
+      controller: 'twitterCtrl as vm'
 
   $httpProvider.defaults.useXDomain = true;
   delete $httpProvider.defaults.headers.common['X-Requested-With'];
