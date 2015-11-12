@@ -1,0 +1,15 @@
+.card-table {
+  height: 33%;
+  display: table;
+  width: 100%;
+}
+
+.list {
+  .card-table-cell {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+  }
+}
