@@ -1,5 +1,6 @@
 {
   "api_eventosURl": "http://dev-partido-novo-app.pantheon.io/api/1/eventos/proximos",
+  "api_noticiasURl": "http://dev-partido-novo-app.pantheon.io/api/1/noticias",
   "googleApiUrl": "https://maps.googleapis.com/maps/api/geocode/json?address=",
   "googleApiJsKey": "AIzaSyA5EciOz3qsV5Gvy4EiLOqvjLu4TvfWLmE",
   "clientInstagramID": "a2b4e3e7da704010a5d87416baec426e",

@@ -67,6 +67,15 @@ angular.module('app', [
     views: 'pageContent':
       templateUrl: 'templates/twitter/list.html'
       controller: 'twitterCtrl as vm'
+  .state 'clipping',
+    url: '/clipping'
+    abstract: true
+    templateUrl: 'templates/menu.html'
+  .state 'clipping.list',
+    url: '/list'
+    views: 'pageContent':
+      templateUrl: 'templates/clipping/list.html'
+      controller: 'clippingCtrl as vm'
 
   $httpProvider.defaults.useXDomain = true;
   delete $httpProvider.defaults.headers.common['X-Requested-With'];

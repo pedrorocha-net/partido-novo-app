@@ -1,7 +1,11 @@
 'use strict'
 
-twitterCtrl = (Config, $twitterApi) ->
+twitterCtrl = (Config, $twitterApi, $ionicLoading) ->
   vm = this
+
+  $ionicLoading.show({
+    template: 'Carregando últimos twitts...'
+  })
 
   clientId = Config.ENV.twitterClientID
   clientSecret = Config.ENV.twitterClientSecret
@@ -16,7 +20,7 @@ twitterCtrl = (Config, $twitterApi) ->
     user_id: user_id
     count: 10).then ((data) ->
     vm.twitts = data
-    console.log vm.twitts
+    $ionicLoading.hide()
     return
   ), (error) ->
     alert 'err: ' + error
@@ -27,4 +31,4 @@ twitterCtrl = (Config, $twitterApi) ->
 
 angular.module('app').controller 'twitterCtrl', twitterCtrl
 
-twitterCtrl.$inject = ['Config', '$twitterApi']
+twitterCtrl.$inject = ['Config', '$twitterApi', '$ionicLoading']
