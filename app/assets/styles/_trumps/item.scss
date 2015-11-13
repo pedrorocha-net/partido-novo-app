@@ -20,4 +20,13 @@
   .item-instagram {
     text-align: center;
   }
+
+  &:last-child.card {
+    margin-bottom: 0;
+  }
+}
+
+
+.last-item {
+  .list { margin-bottom: 40px !important; }
 }

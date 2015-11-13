@@ -4,7 +4,8 @@
       ng-repeat="event in vm.events track by $index"
       event="event"
       see-location="seeLocation(event)"
-      add-to-calendar="addToCalendar(event)">
+      add-to-calendar="addToCalendar(event)"
+      ng-class="{'last-item':$last}">
     </event>
   </ion-content>
 </ion-view>

@@ -1,7 +1,7 @@
 <ion-view view-title="Vídeos do youtube">
   <ion-content>
     <div class="list">
-      <youtube ng-repeat="video in vm.videos track by $index" video="video"></youtube>
+      <youtube ng-repeat="video in vm.videos track by $index" video="video"  ng-class="{'last-item':$last}"></youtube>
     </div>
   </ion-content>
 </ion-view>
