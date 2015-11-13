@@ -1,5 +1,5 @@
 .card-table {
-  height: 33%;
+  height: 28%;
   display: table;
   width: 100%;
 }
@@ -11,5 +11,10 @@
     vertical-align: middle;
     text-align: center;
     font-size: 20px;
+
+    i {
+      font-size: 35px;
+      margin-bottom: 5px;
+    }
   }
 }
