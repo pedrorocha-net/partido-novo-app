@@ -1,8 +1,8 @@
 <ion-view view-title="{{ vm.eventSelected.titulo }}">
   <!-- do you want padding -->
   <ion-content class="padding">
-    <div class="list card stable-bg img-center">
-      <div class="item">
+    <div class="card img-center">
+      <div class="card-content">
       <h2>{{ vm.eventSelected.endereco_cidade }}</h2>
       <p>{{ vm.eventSelected.data_inicio | momentDate}} <small>(de {{ vm.eventSelected.data_inicio | momentHours }} até {{ vm.eventSelected.data_termino | momentHours }})</small></p>
       <h3>{{ vm.eventSelected.titulo }}</h3>

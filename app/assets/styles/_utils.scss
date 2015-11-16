@@ -1,0 +1,33 @@
+.scroll {
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.menuIcon, {
+  color: #fff;
+
+  &:hover { color: #fff; }
+}
+
+.button-clear { color: #fff !important; }
+
+
+.item-thumbnail-left {
+  > img:first-child { border-radius: 0; }
+}
+
+
+.no-radius,
+.card {
+  border-radius: 0 !important;
+}
+
+.padding { padding: 0 16px !important; }
+
+.pane, .view {
+ background-color: #0b818b;
+}

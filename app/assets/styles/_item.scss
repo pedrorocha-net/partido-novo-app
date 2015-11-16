@@ -1,0 +1,35 @@
+.item {
+  white-space: normal;
+  border: none;
+  h2 {
+    overflow: inherit;
+    text-overflow: inherit;
+    white-space: normal;
+  }
+}
+
+.item__address {
+  color: #868484;
+  font-size: 10px;
+}
+
+.item__date-description {
+    top: -5px;
+    position: relative;
+    color: green;
+    font-size: 10px;
+}
+
+.item__description {
+  font-size: 12px;
+
+  &:after { clear: both; content: ''; }
+}
+
+.item-button-right {
+  .button {
+    font-size: 8px;
+    padding: 0 9px;
+    right: 5px;
+  }
+}

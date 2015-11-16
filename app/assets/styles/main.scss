@@ -1,76 +1,13 @@
-/*
-To customize the look and feel of Ionic, you can override the variables
-in ionic's _variables.scss file.
+@import "_variables.scss";
+@import "_modules.scss";
 
-For example, you might change some of the default colors:
-*/
+@import '_base.scss';
+@import '_item.scss';
+@import '_angular-google-maps.scss';
+@import '_btns.scss';
+@import '_partidoNovo.scss';
+@import '_card.scss';
+@import '_img-center.scss';
+@import '_bar.scss';
+@import '_utils.scss';
 
-$light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
-$positive:                        #4a87ee !default;
-$calm:                            #43cee6 !default;
-$balanced:                        #66cc33 !default;
-$energized:                       #f0b840 !default;
-$assertive:                       #ef4e3a !default;
-$royal:                           #8a6de9 !default;
-$dark:                            #444 !default;
-
-// The path for our ionicons font files, relative to the built & temporary main.css
-$ionicons-font-path: "../fonts" !default;
-
-// Include all of Ionic
-@import "../../bower_components/ionic/scss/ionic";
-
-
-.scroll {
-    height: 100%;
-}
-
-#map {
-    width: 100%;
-    height: 100%;
-}
-
-/*
-	SETTINGS
-*/
-
-	@import "_settings/**/*";
-
-
-/*
-	TOOLS
-*/
-	//Mixins
-	@import "_tools/mixins/*";
-
-	// Placeholders
-	@import "_tools/placeholders/*";
-
-
-
-/*
-	GENERIC
-*/
-
-	@import "_generic/**/*";
-
-/*
-	BASE
-*/
-	@import "_base/**/*";
-
-/*
-	OBJECTS
-*/
-	@import "_objects/**/*";
-
-/*
-	COMPONENTS
-*/
-	@import "_components/**/*";
-
-/*
-	TRUMPS
-*/
-	@import "_trumps/**/*";

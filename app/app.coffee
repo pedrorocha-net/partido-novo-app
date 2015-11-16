@@ -1,7 +1,6 @@
 'use strict'
 angular.module('app', [
   'ionic'
-  'ionic-material'
   'ngCordova'
   'ui.router'
   'ngTwitter'
