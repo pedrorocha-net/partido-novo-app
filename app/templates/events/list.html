@@ -1,11 +1,11 @@
 <ion-view view-title="Agenda Partido Novo">
-  <ion-content>
+  <ion-content class="padding">
     <event
       ng-repeat="event in vm.events track by $index"
       event="event"
       see-location="seeLocation(event)"
       add-to-calendar="addToCalendar(event)"
-      ng-class="{'last-item':$last}">
+      ng-class="{'last-card':$last}">
     </event>
   </ion-content>
 </ion-view>

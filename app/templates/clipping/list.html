@@ -1,5 +1,8 @@
 <ion-view view-title="Notícias">
-  <ion-content>
-      <news ng-repeat="new in vm.news" new="new"  ng-class="{'last-item':$last}"></news>
+  <ion-content class="padding">
+      <news
+        ng-repeat="new in vm.news"
+        new="new"
+        ng-class="{'last-card':$last}"></news>
   </ion-content>
 </ion-view>

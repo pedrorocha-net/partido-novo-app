@@ -1,7 +1,10 @@
 <ion-view view-title="Nosso Instagram">
-  <ion-content>
+  <ion-content class="padding">
     <div class="list">
-      <instagram ng-repeat="post in vm.posts track by $index" post="post"  ng-class="{'last-item':$last}"></instagram>
+      <instagram
+        ng-repeat="post in vm.posts track by $index"
+        post="post"
+        ng-class="{'last-card':$last}"></instagram>
     </div>
   </ion-content>
 </ion-view>

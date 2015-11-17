@@ -1,5 +1,7 @@
+.card { margin: 2rem 0 2rem 0; }
+
 .card-table {
-  height: 28.3%;
+  height: 25.3%;
   display: table;
   width: 100%;
 }
@@ -16,3 +18,7 @@
       margin-bottom: 5px;
     }
   }
+
+.last-card {
+  .card { margin-bottom: 65px; }
+}
