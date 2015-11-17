@@ -9,6 +9,7 @@ instagramCtrl = (instagramFactory, $ionicLoading, $state) ->
 
   instagramFactory.getRecentPosts().then ((data) ->
     vm.posts = data.data.data
+    console.log(vm.posts)
     $ionicLoading.hide()
     ), (error) ->
       $ionicLoading.hide()
