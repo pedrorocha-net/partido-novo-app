@@ -1,10 +1,8 @@
 <ion-view view-title="Vídeos do youtube">
   <ion-content class="padding">
-    <div class="list">
       <youtube
         ng-repeat="video in vm.videos track by $index"
         video="video"
         ng-class="{'last-card':$last}"></youtube>
-    </div>
   </ion-content>
 </ion-view>
