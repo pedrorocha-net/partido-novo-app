@@ -1,9 +1,9 @@
-<div class="card img-center">
-  <div class="card-content">
-    <a class="item-instagram" open-url="{{ post.link }}">
-      <img ng-src="{{post.images.low_resolution.url}}">
+<div class="card card-img">
+  <a class="item-instagram" open-url="{{ post.link }}">
+    <img ng-src="{{post.images.low_resolution.url}}">
+    <div class="card-content">
       <p>{{ post.caption.text }}</p>
-    </a>
-  </div>
+    </div>
+  </a>
 </div>
 

@@ -1,9 +1,9 @@
-<div class="card img-center">
-  <div class="card-content">
-    <a class=""  open-url="https://www.youtube.com/watch?v={{ video.id.videoId }}">
-      <img ng-src="{{video.snippet.thumbnails.medium.url}}">
-      <h3>{{ video.snippet.title }}</h3>
+<div class="card card-img">
+  <a class=""  open-url="https://www.youtube.com/watch?v={{ video.id.videoId }}">
+    <img ng-src="{{video.snippet.thumbnails.medium.url}}">
+    <div class="card-content">
+      <h4>{{ video.snippet.title }}</h4>
       <p>{{ video.snippet.publishedAt | date:'dd/MM/yyyy' }}</p>
-    </a>
-  </div>
+    </div>
+  </a>
 </div>
