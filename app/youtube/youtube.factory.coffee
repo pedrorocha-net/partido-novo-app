@@ -3,6 +3,7 @@
 
 youtubeFactory = ($http, Config) ->
   @getVideos = () ->
+    console.log Config.ENV.googleApiJsKey
     $http.get('https://www.googleapis.com/youtube/v3/search', params:
       key: Config.ENV.googleApiJsKey
       type: 'video'

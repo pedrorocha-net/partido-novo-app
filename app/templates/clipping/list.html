@@ -4,5 +4,11 @@
         ng-repeat="new in vm.news"
         new="new"
         ng-class="{'last-card':$last}"></news>
+
+      <div class="card" ng-if="vm.news == ''">
+        <div class="card-content">
+          nenhuma notícia encontrado =(
+        </div>
+      </div>
   </ion-content>
 </ion-view>

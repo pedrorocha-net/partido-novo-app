@@ -4,5 +4,11 @@
       ng-repeat="twitt in vm.twitts track by $index"
       twitt="twitt"
       ng-class="{'last-card':$last}"></twitter>
+
+      <div class="card" ng-if="vm.twitts == ''">
+        <div class="card-content">
+          nenhum twitt encontrado =(
+        </div>
+      </div>
   </ion-content>
 </ion-view>

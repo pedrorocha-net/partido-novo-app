@@ -1,5 +1,11 @@
 <ion-view view-title="Nosso Instagram">
   <ion-content class="padding">
       <instagram ng-repeat="post in vm.posts" post="post" ng-class="{'last-card':$last}"></instagram>
+
+      <div class="card" ng-if="vm.posts == ''">
+        <div class="card-content">
+          nenhum post do intagram encontrado =(
+        </div>
+      </div>
   </ion-content>
 </ion-view>

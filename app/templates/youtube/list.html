@@ -4,5 +4,11 @@
         ng-repeat="video in vm.videos track by $index"
         video="video"
         ng-class="{'last-card':$last}"></youtube>
+
+      <div class="card" ng-if="vm.videos == ''">
+        <div class="card-content">
+          nenhum video encontrado =(
+        </div>
+      </div>
   </ion-content>
 </ion-view>
