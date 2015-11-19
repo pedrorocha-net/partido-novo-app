@@ -1,6 +1,6 @@
 'use strict'
 
-youtubeCtrl = (youtubeFactory, $ionicLoading, $state) ->
+youtubeCtrl = (youtubeFactory, $ionicLoading, $state, errorFactory) ->
   vm = this
 
   $ionicLoading.show({
@@ -12,10 +12,10 @@ youtubeCtrl = (youtubeFactory, $ionicLoading, $state) ->
     $ionicLoading.hide()
   ), (error) ->
       $ionicLoading.hide()
-      $state.go 'about.partidonovo'
+      errorFactory.default()
 
   return
 
 angular.module('app').controller 'youtubeCtrl', youtubeCtrl
 
-youtubeCtrl.$inject = ['youtubeFactory', '$ionicLoading', '$state']
+youtubeCtrl.$inject = ['youtubeFactory', '$ionicLoading', '$state', 'errorFactory']

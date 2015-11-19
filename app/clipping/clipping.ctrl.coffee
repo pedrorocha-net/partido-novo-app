@@ -1,6 +1,6 @@
 'use strict'
 
-clippingCtrl = (clippingFactory, $ionicLoading, $state) ->
+clippingCtrl = (clippingFactory, $ionicLoading, $state, errorFactory) ->
   vm = this
 
   $ionicLoading.show({
@@ -12,10 +12,10 @@ clippingCtrl = (clippingFactory, $ionicLoading, $state) ->
     $ionicLoading.hide()
   ), (error) ->
     $ionicLoading.hide()
-    $state.go 'about.partidonovo'
+    errorFactory.default()
 
   return
 
 angular.module('app').controller 'clippingCtrl', clippingCtrl
 
-clippingCtrl.$inject = ['clippingFactory', '$ionicLoading', '$state']
+clippingCtrl.$inject = ['clippingFactory', '$ionicLoading', '$state', 'errorFactory']

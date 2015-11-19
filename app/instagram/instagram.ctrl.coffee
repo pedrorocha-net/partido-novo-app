@@ -1,6 +1,6 @@
 'use strict'
 
-instagramCtrl = (instagramFactory, $ionicLoading, $state) ->
+instagramCtrl = (instagramFactory, $ionicLoading, $state, errorFactory) ->
   vm = this
 
   vm.oi = 'adsadssaad'
@@ -14,10 +14,10 @@ instagramCtrl = (instagramFactory, $ionicLoading, $state) ->
     $ionicLoading.hide()
     ), (error) ->
       $ionicLoading.hide()
-      $state.go 'about.partidonovo'
+      errorFactory.default()
 
   return
 
 angular.module('app').controller 'instagramCtrl', instagramCtrl
 
-instagramCtrl.$inject = ['instagramFactory', '$ionicLoading', '$state']
+instagramCtrl.$inject = ['instagramFactory', '$ionicLoading', '$state', 'errorFactory']

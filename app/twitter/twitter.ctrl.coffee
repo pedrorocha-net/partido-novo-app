@@ -1,6 +1,6 @@
 'use strict'
 
-twitterCtrl = (Config, $twitterApi, $ionicLoading, $state) ->
+twitterCtrl = (Config, $twitterApi, $ionicLoading, $state, errorFactory) ->
   vm = this
 
   $ionicLoading.show({
@@ -24,7 +24,7 @@ twitterCtrl = (Config, $twitterApi, $ionicLoading, $state) ->
     return
   ), (error) ->
      $ionicLoading.hide()
-     $state.go('about.partidonovo')
+     errorFactory.default()
     return
 
   return
@@ -32,4 +32,4 @@ twitterCtrl = (Config, $twitterApi, $ionicLoading, $state) ->
 
 angular.module('app').controller 'twitterCtrl', twitterCtrl
 
-twitterCtrl.$inject = ['Config', '$twitterApi', '$ionicLoading', '$state']
+twitterCtrl.$inject = ['Config', '$twitterApi', '$ionicLoading', '$state', 'errorFactory']
