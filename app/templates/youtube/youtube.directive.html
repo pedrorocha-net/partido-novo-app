@@ -1,9 +1,10 @@
-<div class="card card-img">
-  <a open-url="https://www.youtube.com/watch?v={{ video.id.videoId }}">
-    <img ng-src="{{video.snippet.thumbnails.medium.url}}">
-    <div class="card-content">
-      <h4>{{ video.snippet.title }}</h4>
-      <p>{{ video.snippet.publishedAt | date:'dd/MM/yyyy' }}</p>
-    </div>
-  </a>
+<div class="card card-img"
+     open-url="https://www.youtube.com/watch?v={{ video.id.videoId }}">
+  <img ng-src="{{video.snippet.thumbnails.medium.url}}"/>
+
+  <div class="card-content">
+    <h2>{{ video.snippet.title }}</h2>
+
+    <p class="data">{{ video.snippet.publishedAt | date:'dd/MM/yyyy' }}</p>
+  </div>
 </div>

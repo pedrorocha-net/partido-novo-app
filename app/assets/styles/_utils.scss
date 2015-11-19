@@ -1,33 +1,39 @@
 .scroll {
-    height: 100%;
+  height: 100%;
 }
 
 #map {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-.menuIcon, {
+.menuIcon {
   color: #fff;
 
-  &:hover { color: #fff; }
+  &:hover {
+    color: #fff;
+  }
 }
 
-.button-clear { color: #fff !important; }
-
+.button-clear {
+  color: #fff !important;
+}
 
 .item-thumbnail-left {
-  > img:first-child { border-radius: 0; }
+  > img:first-child {
+    border-radius: 0;
+  }
 }
-
 
 .no-radius,
 .card {
   border-radius: 0 !important;
 }
 
-.padding { padding: 0 15px; }
+.padding {
+  padding: 0 15px;
+}
 
 .pane, .view {
- background-color: #0b818b;
+  background-color: #0b818b;
 }

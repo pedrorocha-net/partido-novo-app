@@ -2,5 +2,35 @@
   text-decoration: none;
 }
 
+body {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.87);
+}
 
-address { margin-bottom: 0px; }
+address {
+  margin-bottom: 0px;
+}
+
+.bar.bar-header {
+  background: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.view-container {
+  > .pane {
+    background: $brand-primary;
+  }
+}
+
+.img-center {
+  .card-content {
+    text-align: center;
+    img {
+      width: 100%;
+      display: inline-block;
+    }
+  }
+}

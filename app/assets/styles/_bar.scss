@@ -1,3 +1,22 @@
 .bar {
-  .title-menu {  margin-top: 6px; }
+  .title-menu {
+    margin-top: 6px;
+  }
+}
+
+.partidoNovo--color {
+  background-color: #f58426;
+  color: #f58426;
+
+  .title, .card-table-cell {
+    color: #fff;
+  }
+}
+
+.partidoNovo--color--blue {
+  background-color: #5fcec6;
+}
+
+.paditdoNovo__title--color {
+  color: #f58426;
 }

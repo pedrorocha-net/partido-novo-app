@@ -23,7 +23,10 @@
 .item__description {
   font-size: 12px;
 
-  &:after { clear: both; content: ''; }
+  &:after {
+    clear: both;
+    content: '';
+  }
 }
 
 .item-button-right {

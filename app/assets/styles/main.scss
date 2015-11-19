@@ -1,14 +1,13 @@
-@import "_variables.scss";
-@import "_modules.scss";
+@import "_variables";
+@import "../../bower_components/ionic/scss/ionic";
 
-@import '_base.scss';
-@import '_item.scss';
-@import '_angular-google-maps.scss';
-@import '_btns.scss';
-@import '_partidoNovo.scss';
-@import '_card.scss';
-@import '_img-center.scss';
-@import '_bar.scss';
-@import '_utils.scss';
-@import '_media@480h.scss';
-
+@import '_base';
+@import '_sidemenu';
+@import '_item';
+@import '_angular-google-maps';
+@import '_btns';
+@import '_card';
+@import '_bar';
+@import '_utils';
+@import '_youtube';
+@import '_sobre';
