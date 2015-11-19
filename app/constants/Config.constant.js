@@ -22,7 +22,8 @@
       'screen_name': 'DielDuarte',
       'x_auth_expires': '0'
     },
-    'partidoNovoUserTwitterID': '2734700584'
+    'partidoNovoUserTwitterID': '2734700584',
+    'partidoNovoChannelID': 'UCQwMWA9DGUO1cBJhg_wQWsQ'
       /*endinject*/
       /*eslint-enable */
     },
