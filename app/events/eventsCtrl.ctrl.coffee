@@ -2,6 +2,7 @@
 
 eventsCtrl = (eventsFactory, $scope, $ionicLoading, $state, $stateParams, geoUtilsFactory, $cordovaCalendar, $http) ->
   vm = this
+  vm.eventSelected = eventsFactory.getSelectedEventLocation()
 
   $scope.seeLocation = (event) ->
     eventsFactory.setSelectedEventLocation(event)
@@ -29,9 +30,10 @@ eventsCtrl = (eventsFactory, $scope, $ionicLoading, $state, $stateParams, geoUti
     $ionicLoading.show({
       template: 'Carregando Localizaçao...'
     })
-    event = eventsFactory.getSelectedEventLocation()
 
-    geoUtilsFactory.getCoordinates(event).then (response) ->
+    vm.eventSelected = eventsFactory.getSelectedEventLocation()
+    console.log(vm.eventSelected)
+    geoUtilsFactory.getCoordinates(vm.eventSelected).then (response) ->
       lat = response.data.results[0].geometry.location.lat
       lon = response.data.results[0].geometry.location.lng
       Latlng = new google.maps.LatLng(lat, lon)
@@ -47,9 +49,9 @@ eventsCtrl = (eventsFactory, $scope, $ionicLoading, $state, $stateParams, geoUti
       map.setCenter(new google.maps.LatLng(lat, lon))
 
       marker = new google.maps.Marker({
-          position: new google.maps.LatLng(lat, lon)
-          map: map
-          title: ""
+        position: new google.maps.LatLng(lat, lon)
+        map: map
+        title: ""
       })
 
       $scope.map = map
@@ -77,4 +79,5 @@ eventsCtrl = (eventsFactory, $scope, $ionicLoading, $state, $stateParams, geoUti
 
 angular.module('app').controller 'eventsCtrl', eventsCtrl
 
-eventsCtrl.$inject = ['eventsFactory', '$scope', '$ionicLoading', '$state', '$stateParams', 'geoUtilsFactory', '$cordovaCalendar', '$http']
+eventsCtrl.$inject = ['eventsFactory', '$scope', '$ionicLoading', '$state', '$stateParams', 'geoUtilsFactory',
+  '$cordovaCalendar', '$http']
