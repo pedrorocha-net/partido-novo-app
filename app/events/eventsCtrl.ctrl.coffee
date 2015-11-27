@@ -4,6 +4,16 @@ eventsCtrl = (eventsFactory, $scope, $ionicLoading, $state, $stateParams, geoUti
   vm = this
   vm.eventSelected = eventsFactory.getSelectedEventLocation()
 
+  data =  {
+    app_id: 'a60485b6-7c47-11e5-9f7a-a0369f2d9328',
+    device_type: 1,
+    included_segments: ["All"]
+  }
+  console.log('oi')
+  $http.post('https://onesignal.com/api/v1/players', data).then (res) ->
+    console.log(res)
+    return
+
   $scope.seeLocation = (event) ->
     eventsFactory.setSelectedEventLocation(event)
     $state.go('events.location')
